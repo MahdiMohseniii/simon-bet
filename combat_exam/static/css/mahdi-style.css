@@ -1,0 +1,24 @@
+
+        
+.first-page {
+    background-image: url('/static/picc/bg-masthead.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+
+
+
+.header-spacing{
+    margin-top: 450px;
+    color:rgb(131, 152, 153);
+}
+
+
+.header-spacing :hover{
+    color: darkcyan;
+    transition: all  2s;
+    cursor: pointer;
+}

@@ -18,8 +18,8 @@
                     <a class="btn btn-outline-danger " style="float: inline-start; margin-top: 2px;"  href="{% url 'logout' %}"> log out</a>
                     </abbr>     
                 {% else %}
-                <a class="btn btn-outline-secondary me-1 " style="float: inline-start; margin-top: 2px;" href="{% url 'login' %}">log in</a>
-                <a class="btn btn-outline-info me-1 " style="float: inline-start; margin-top: 2px;" href="{% url 'signup' %}">sign up</a> 
+                <a class="btn btn-outline-secondary me-1 " style="float: inline-start; margin-top: 2px;" href="{% url 'login' %}">log in</a> 
+                <a class="btn btn-outline-info me-1 " style="float: inline-start; margin-top: 2px;" href="{% url 'signup' %}">sign up</a>
                 {% endif%}
                 <a class="btn btn-outline-success" style="float: inline-end; margin-top: 2px;" href="{% url 'about' %}">about us</a>  
                 <br><br>
@@ -34,10 +34,17 @@
                         </div>
                     {% endif %}
                 {% endfor %}
+
                 <div class="col-10 header-spacing">
-                    <h1>This is the best chance for you</h1>
-                    <h2>Just test your chance and win 10k$ </h2>
-                    <h3>By just answering easy things</h3>
+                     <!-- ************************ -->
+                     <form method="POST" action="{% url 'signup' %}">
+                        {% csrf_token %}
+                            {{ form.as_p}}
+                            
+                        
+                        <button type="submit" class="btn btn-secondary">sign up</button>
+                      </form>
+
                     
                 </div>
             </center>

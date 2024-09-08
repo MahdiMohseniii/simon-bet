@@ -1,0 +1,19 @@
+.about-page {
+    background-image: url('/static/picc/bg-aboutt.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.text-mahdi {
+    color:rgb(192, 232, 209);
+    font-size: 35px;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+
+.headera-spacing{
+    margin-top: 300px;
+    
+}
