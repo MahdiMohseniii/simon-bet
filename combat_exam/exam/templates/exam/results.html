@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+</head>
+<body>
+    <h1>Exam Results</h1>
+    <p>You answered {{ correct_answers }} questions correctly.</p>
+    {% if lottery_code %}
+        <p>Your lottery code is: {{ lottery_code }}</p>
+    {% endif %}
+</body>
+</html>

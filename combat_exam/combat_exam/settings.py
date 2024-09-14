@@ -28,6 +28,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'registration',
+    'payment',
+    'exam',
 ]
 
 MIDDLEWARE = [
@@ -117,3 +119,11 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# zarinpal_gateway/settings.py  
+ZARINPAL_MERCHANT_ID = 'your_merchant_id_here'
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.  
+BASE_DIR = Path(__file__).resolve().parent.parent  

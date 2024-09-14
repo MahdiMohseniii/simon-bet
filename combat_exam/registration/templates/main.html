@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mahdi-style.css' %}">
+</head>
+<body >
+    
+<div class="container first-page">
+    <div class="row">
+        <center>
+            <abbr title="be carefull you are getting out of the site">
+                <a class="btn btn-outline-danger " style="float: inline-start; margin-top: 2px;"  href="{% url 'logout' %}"> log out</a>
+            </abbr>
+            <a class="btn btn-outline-success" style="float: inline-end; margin-top: 2px;" href="{% url 'about' %}">about us</a>
+        
+        <h1 style="color: rgb(177, 199, 229); margin-top: 7px;">Welcome to the main page of Combat_Bet site</h1>
+        </center>
+
+        <div class=" dd" style="margin-top:150px ;margin-left: 210px;color: rgb(135, 218, 75); ">
+            <h1>1: go to the payment page and pay </h1>
+            <h2>2: answer at least 3 questions</h2>
+            <h3>3: get your code and wait</h3>
+        </div>
+
+        <!-- <div style="border:4px solid aqua;border-radius: 8px ; margin-top: 250px; margin-left: 500px ;text-align: center ;width: 450px;height: 150px; color: azure;">
+            <a class="btn btn-outline-info" style="width: 110px;height: 60px; padding-top: 14px;margin-top: 24px;">
+            buy ticket
+            </a> 
+            <br><hr>
+            <p>Click The Button To Buy Ticket</p>
+            
+            
+        </div>
+            -->
+
+            <div style="position:relative; width: 450px; height: 150px; margin-top: 250px; margin-left: 500px; text-align: center; color: azure;">  
+            <!-- Background div -->  
+            <div style="position:absolute; top:0; left:0; right:0; bottom:0; border: 0.5px solid aqua; border-radius: 8px; backdrop-filter: blur(8px); z-index: 1;"></div>  
+        
+            <!-- Content inside the div with a higher z-index -->  
+            <div style="position: relative; z-index: 2;">  
+                <a class="btn btn-outline-info" style="width: 110px; height: 60px; padding-top: 14px; margin-top: 24px;" href="{% url 'checkout' %}">  
+                    buy ticket  
+                </a>  
+                <br>  
+                <hr>  
+                <p>Click The Button To Buy Ticket</p>  
+            </div>  
+        </div>
+
+    </div>
+
+</div>
+    
+
+    <script src="{% static 'js/bootstrap.js' %}" ></script>
+</body>
+</html>

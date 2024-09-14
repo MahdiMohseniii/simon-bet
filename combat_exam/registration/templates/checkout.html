@@ -1,0 +1,17 @@
+<!-- payment/templates/checkout.html -->  
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Checkout</title>  
+</head>  
+<body>  
+    <h1>Checkout</h1>  
+    <form action="{% url 'create_payment' %}" method="POST">  
+        {% csrf_token %}  
+        <label for="amount">Amount:</label>  
+        <input type="number" name="amount" value="100" required>  
+        <button type="submit">Pay Now</button>  
+    </form>  
+</body>  
+</html>

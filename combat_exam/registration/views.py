@@ -19,10 +19,11 @@ def Login_user (request):
         if user is not None:
             login(request, user)
             messages.success(request, 'Logged in successfully!')
-            return redirect('home')
+            return redirect('main')
         else:
             messages.error(request, 'Invalid username or password!')
             return redirect('login')
+
     else:
         return render(request, 'login.html')
 
@@ -42,12 +43,38 @@ def signup_user (request):
             user = authenticate(request, username=username, password=password1)
             login(request, user)
             messages.success(request, ('Signup successful!'))
-            return redirect("home")
+            return redirect("main")
         else:
             messages.error(request, ('There was an error with your signup. Please correct the form.'))
             return redirect("signup")
+    
     else:
         return render(request, 'signup.html', {'form': form})
     
 def about(request):
     return render(request, 'about.html')
+
+def main(request):
+    return render(request, 'main.html')
+
+# *********************
+# payment/views.py  
+from django.shortcuts import render, redirect  
+from django.http import JsonResponse  
+
+def checkout(request):  
+    return render(request, 'checkout.html')  
+
+def create_payment(request):  
+    if request.method == 'POST':  
+        amount = request.POST.get('amount', 100)  # Default amount  
+        # Simulate payment processing  
+        return redirect('payment_success', amount=amount)  
+
+    return redirect('checkout')  
+
+def payment_success(request, amount):  
+    return render(request, 'success.html', {'amount': amount})  
+
+def payment_cancel(request):  
+    return render(request, 'cancel.html')
