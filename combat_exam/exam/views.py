@@ -15,8 +15,9 @@ def get_current_question(request):
 
 def exam_start(request):
     request.session['current_question'] = 1
-    request.session['start_time'] = timezone.now()
+    request.session['start_time'] = timezone.now().isoformat()  # Convert datetime to string
     return redirect('exam_question')
+
 
 def exam_question(request):
     question = get_current_question(request)

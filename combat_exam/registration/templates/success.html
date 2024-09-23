@@ -1,13 +1,19 @@
+{% load static %}
 <!-- payment/templates/success.html -->  
 <!DOCTYPE html>  
 <html lang="en">  
 <head>  
     <meta charset="UTF-8">  
-    <title>Payment Successful</title>  
-</head>  
+    <title>Payment Successful</title> 
+    
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>   
 <body>  
     <h1>Payment Successful!</h1>  
     <p>Thank you for your payment of {{ amount }} units.</p>  
     <a href="{% url 'checkout' %}">Go back to checkout</a>  
+    <br>
+    <center><a class="btn btn-outline-info" style="height: 250px;width: 400px;font-size: 100px;cursor: pointer;" href="{% url 'exam_start' %}" >EXAM</a></center>
+    
 </body>  
 </html>
